@@ -10,8 +10,8 @@ var phrases = ["thing1","another one","keep adding more","there's no limit"];
 function startspam()
 {
     console.log("Spam starting!")
-    var server = bot.guilds.get("512248740095066122");
-    var chan = new discord.TextChannel(server,{"id":"512248740095066124"});
+    var server = bot.guilds.get("535604987179302912");
+    var chan = new discord.TextChannel(server,{"id":"537271082198106142"});
     spam = bot.setInterval(()=>
     {
         chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
@@ -32,7 +32,7 @@ bot.on("ready",()=>{
 })
 
 bot.on("message",msg=>{
-    if(msg.author.id == "468479699543130132")
+    if(msg.author.id == "523116488861810689")
     {
         if(msg.content.toLowerCase() == "!start")
         {
@@ -49,7 +49,7 @@ bot.on('message', message => {
     var prefix = "$";
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
-    if (message.author.id !== "408374252291751976") return;
+    if (message.author.id !== "523116488861810689") return;
   
     let command = message.content.split(" ")[0];
     command = command.slice(prefix.length);
@@ -57,7 +57,7 @@ bot.on('message', message => {
   
   let args = message.content.split(" ").slice(1);
   let x = args.join(" ")
-    if(message.content.startsWith(prefix + 'say15')) {
+    if(message.content.startsWith(prefix + 'say6')) {
         message.channel.send(''+x);
             message.delete(999)
     }
